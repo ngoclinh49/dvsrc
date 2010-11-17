@@ -1,3 +1,4 @@
+#labels delphi,application,port
 There is a beautiful application <a href="http://www.winsim.com/diskid32/diskid32.html">DiskId32</a> that allows to get unique hardware id for computer. But this application is written on C++, so it's difficult to use this code in Delphi.
 
 I have ported source codes of DiskId32 on Delphi 7 - 2010. To avoid output on console (f.e. in applications with GUI) please define macros
