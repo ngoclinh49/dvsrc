@@ -33,4 +33,4 @@ using (Application app = ExcelApplication.Create()) {
 
 <a href="http://code.google.com/p/dvsrc/downloads/detail?name=ManagedExcel.7z&can=2&q=">Download source codes of Managed Excel project</a>
 
-<a href="http://code.google.com/p/dvsrc/source/browse/trunk/CSharp/ManagedExcel/COMWrapper.cs">View source codes of Managed Excel project</a>
+<a href="http://code.google.com/p/dvsrc/source/browse/trunk/CSharp/ManagedExcel">View source codes of Managed Excel project</a>
