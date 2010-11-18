@@ -1,9 +1,9 @@
 #labels android,test
 Android API doesn't allow to create animated widget. Anyway, there are some workarounds. 
 
-<a href="http://code.google.com/p/dvsrc/source/browse/trunk/Android/TestAnimatedWidget">TestAnimatedWidget</a> is example of creation animated widget. The animation is very simple - a wheel. Click on widget and the wheel will make one circle.
+<a href="http://code.google.com/p/dvsrc/source/browse/trunk/Android/TestAnimatedWidget">!TestAnimatedWidget</a> is example of creation animated widget. The animation is very simple - a wheel. Click on widget and the wheel will make one circle.
 
-TestAnimatedWidget tests three approaches for animation emulation. First one uses <code>remoteViews.setImageViewResource(R.id.AAA, R.drawable.BBB)</code> to pass id of next animation frame to remote view. Second one uses <code>remoteViews.setImageViewBitmap(R.id.AAA, bitmap)</code> to pass "generated" bitmap to remote view. Bitmaps are simply loaded from resources. Last one uses <code>remoteViews.setImageViewUri(R.id.AAA, uri)</code> to pass uri of "generated" bitmap to remote view. Bitmaps are simply loaded from resources and stored on disk. To select approach, please set appropriate value of flag USE_GENERATED_BITMAPS in class TestAnimatedWidgetProvider.
+!TestAnimatedWidget tests three approaches for animation emulation. First one uses <code>remoteViews.setImageViewResource(R.id.AAA, R.drawable.BBB)</code> to pass id of next animation frame to remote view. Second one uses <code>remoteViews.setImageViewBitmap(R.id.AAA, bitmap)</code> to pass "generated" bitmap to remote view. Bitmaps are simply loaded from resources. Last one uses <code>remoteViews.setImageViewUri(R.id.AAA, uri)</code> to pass uri of "generated" bitmap to remote view. Bitmaps are simply loaded from resources and stored on disk. To select approach, please set appropriate value of flag USE_GENERATED_BITMAPS in class TestAnimatedWidgetProvider.
 
 First approach is fast enough. Second is terribly slow and generates errors "!! FAILED BINDER TRANSACTION !!". Third is slow too, but doesn't generate errors. Instead of it, it skips most animation frames that looks very badly. So, it's possible to made conclusion, that it's a problem to create animated widget that generates animation bitmaps on the fly.
 
